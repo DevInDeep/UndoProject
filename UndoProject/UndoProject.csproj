@@ -67,6 +67,7 @@
     <Compile Include="Undo\Commands.cs" />
     <Compile Include="Undo\Commands\EmptyStringCommand.cs" />
     <Compile Include="Undo\Commands\TextChangeCommand.cs" />
+    <Compile Include="Undo\Commands\TrackBarValueChangedCommand.cs" />
     <Compile Include="Undo\ICommand.cs" />
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
