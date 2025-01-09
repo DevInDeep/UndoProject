@@ -29,9 +29,9 @@
         private void InitializeComponent()
         {
             this.btnUndo = new System.Windows.Forms.Button();
-            this.txtText = new UndoProject.UndoableTextBox();
-            this.trackBar = new UndoProject.UndoableTrackBar();
             this.btnUndoTrackBar = new System.Windows.Forms.Button();
+            this.trackBar = new UndoProject.UndoableTrackBar();
+            this.txtText = new UndoProject.UndoableTextBox();
             ((System.ComponentModel.ISupportInitialize)(this.trackBar)).BeginInit();
             this.SuspendLayout();
             // 
@@ -46,25 +46,9 @@
             this.btnUndo.UseVisualStyleBackColor = true;
             this.btnUndo.Click += new System.EventHandler(this.btnUndo_Click);
             // 
-            // txtText
-            // 
-            this.txtText.Location = new System.Drawing.Point(32, 29);
-            this.txtText.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
-            this.txtText.Name = "txtText";
-            this.txtText.Size = new System.Drawing.Size(548, 38);
-            this.txtText.TabIndex = 0;
-            // 
-            // trackBar
-            // 
-            this.trackBar.Location = new System.Drawing.Point(32, 104);
-            this.trackBar.Maximum = 100;
-            this.trackBar.Name = "trackBar";
-            this.trackBar.Size = new System.Drawing.Size(548, 114);
-            this.trackBar.TabIndex = 2;
-            // 
             // btnUndoTrackBar
             // 
-            this.btnUndoTrackBar.Location = new System.Drawing.Point(603, 104);
+            this.btnUndoTrackBar.Location = new System.Drawing.Point(603, 146);
             this.btnUndoTrackBar.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
             this.btnUndoTrackBar.Name = "btnUndoTrackBar";
             this.btnUndoTrackBar.Size = new System.Drawing.Size(200, 55);
@@ -73,11 +57,30 @@
             this.btnUndoTrackBar.UseVisualStyleBackColor = true;
             this.btnUndoTrackBar.Click += new System.EventHandler(this.btnUndoTrackBar_Click);
             // 
+            // trackBar
+            // 
+            this.trackBar.Location = new System.Drawing.Point(22, 146);
+            this.trackBar.Maximum = 100;
+            this.trackBar.Minimum = 5;
+            this.trackBar.Name = "trackBar";
+            this.trackBar.Size = new System.Drawing.Size(548, 114);
+            this.trackBar.TabIndex = 2;
+            this.trackBar.Value = 5;
+            this.trackBar.ValueChanged += new System.EventHandler(this.trackBar_ValueChanged);
+            // 
+            // txtText
+            // 
+            this.txtText.Location = new System.Drawing.Point(32, 29);
+            this.txtText.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
+            this.txtText.Name = "txtText";
+            this.txtText.Size = new System.Drawing.Size(548, 38);
+            this.txtText.TabIndex = 0;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(16F, 31F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(827, 217);
+            this.ClientSize = new System.Drawing.Size(827, 272);
             this.Controls.Add(this.btnUndoTrackBar);
             this.Controls.Add(this.trackBar);
             this.Controls.Add(this.btnUndo);
@@ -88,6 +91,7 @@
             this.Name = "Form1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Undoable TextBox";
+            this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.trackBar)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
