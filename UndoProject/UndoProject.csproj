@@ -60,6 +60,9 @@
     <Compile Include="UndoableTextBox.cs">
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="UndoableTrackBar.cs">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="Undo\CommandController.cs" />
     <Compile Include="Undo\Commands.cs" />
     <Compile Include="Undo\Commands\EmptyStringCommand.cs" />
