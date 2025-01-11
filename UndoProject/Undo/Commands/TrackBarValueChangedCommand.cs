@@ -11,12 +11,7 @@ namespace UndoProject.Undo
             this.trackBar = trackBar;
             this.value = value;
         }
-        public void Execute()
-        {
-            trackBar.DisableUndo();
-            trackBar.Value = value;
-            trackBar.EnableUndo();
-        }
+        public void Execute() => trackBar.Value = value;
 
         public Optional<ICommand> Undo() => Optional<ICommand>.Create(new TrackBarValueChangedCommand(trackBar, value));
     }
