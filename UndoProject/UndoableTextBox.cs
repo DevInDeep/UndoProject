@@ -12,7 +12,6 @@ namespace UndoProject
         public CommandController Command { get; private set; } = new CommandController();
         public UndoableTextBox()
         {
-            Command.Add(new EmptyStringCommand(this));
             TextChanged += UndoableTextBox_TextChanged;
             EnableUndo();
         }

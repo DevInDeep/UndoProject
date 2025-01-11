@@ -7,7 +7,7 @@ namespace UndoProject.Extensions
     {
         public static Optional<T> PopThenPeek<T>(this Stack<T> stack)
         {
-            if (stack.Count == 1) return Optional<T>.Empty();
+            if (stack.Count <= 1) return Optional<T>.Empty();
             stack.Pop();
             return Optional<T>.Create(stack.Peek());
         }
