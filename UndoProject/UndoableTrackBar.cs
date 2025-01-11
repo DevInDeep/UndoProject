@@ -19,7 +19,7 @@ namespace UndoProject
 
         private void UndoableTrackBar_ValueChanged(object sender, EventArgs e)
         {
-            Command.Add(new TrackBarValueChangedCommand(this, Minimum));
+            Command.Add(new TrackBarValueChangedCommand(this, Value));
             ValueChanged -= UndoableTrackBar_ValueChanged;
         }
 

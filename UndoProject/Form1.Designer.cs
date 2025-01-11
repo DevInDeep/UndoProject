@@ -65,7 +65,7 @@
             this.trackBar.Name = "trackBar";
             this.trackBar.Size = new System.Drawing.Size(548, 114);
             this.trackBar.TabIndex = 2;
-            this.trackBar.Value = 5;
+            this.trackBar.Value = 8;
             this.trackBar.ValueChanged += new System.EventHandler(this.trackBar_ValueChanged);
             // 
             // txtText
